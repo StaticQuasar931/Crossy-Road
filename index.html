@@ -15,22 +15,21 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
   <!-- Primary SEO -->
-  <meta name="description" content="Play Crossy Road unblocked and school-safe on StaticQuasar931. Hop past traffic and rivers, collect coins, and chase high scores — works at school, work, or anywhere!">
+  <meta name="description" content="Play Crossy Road unblocked and school-safe on StaticQuasar931. Hop through traffic and rivers, collect coins, and chase high scores — works at school, work, or anywhere!">
   <meta name="keywords" content="Crossy Road, CrossyRoad, crossy road, crossyroad game, crossyroad g@me, Crossy Road unblocked, crossy road unblocked at school, Crossy Road school safe, Crossy Road working at school, unbl0cked Crossy Road, free Crossy Road online, Crossy Road web game, play Crossy Road at school, Static, Static 931, StaticQuasar, StaticQuasar931, staticq, staticq931, 931 games">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#111827">
 
-  <!-- Social Metadata (art only in meta, not shown on page) -->
+  <!-- Social Metadata (image only in meta, not on page) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Play Crossy Road Unblocked – StaticQuasar931">
   <meta property="og:description" content="School-safe Crossy Road that actually works. Fullscreen, fast, and ad-free on StaticQuasar931.">
   <meta property="og:url" content="https://staticquasar931.github.io/Crossy-Road/">
   <meta property="og:image" content="https://res.cloudinary.com/dcsrqennd/image/upload/v1757981345/CrossyRoad_StaticQuasar931_clndd6.webp">
   <meta property="og:site_name" content="StaticQuasar931">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Play Crossy Road Unblocked – StaticQuasar931">
-  <meta name="twitter:description" content="Hop, dodge, and survive! Play Crossy Road unblocked and school-safe here.">
+  <meta name="twitter:description" content="Hop, dodge, survive! Play Crossy Road unblocked and school-safe here.">
   <meta name="twitter:image" content="https://res.cloudinary.com/dcsrqennd/image/upload/v1757981345/CrossyRoad_StaticQuasar931_clndd6.webp">
 
   <!-- JSON-LD -->
@@ -50,24 +49,25 @@
   }
   </script>
 
-  <!-- Stylesheets (keep your existing) -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="app-store-interstitial.css">
+  <!-- Stylesheets (keep your existing game CSS) -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="app-store-interstitial.css" />
 
-  <!-- Preload popup icons (transparent preferred) -->
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png">
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png">
+  <!-- Preload rotating popup icons (transparent recommended) -->
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png"> <!-- Instagram -->
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png"> <!-- Google Form -->
 
-  <!-- Remove ads & Google Tag (explicitly not loaded) -->
+  <!-- REMOVE ADS / TRACKING: Google Ads & Google Tag & Poki SDK are NOT loaded -->
   <!-- (Removed) <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?..."></script> -->
   <!-- (Removed) <script async src="https://www.googletagmanager.com/gtag/js?id=..."></script> -->
-  <!-- (Removed) poki-sdk.js to avoid ad hooks -->
+  <!-- (Removed) poki-sdk.js -->
 
   <style>
     /* ===== DEFAULT STATIC MENU (Top-Left) ===== */
     .sq-menu{
       position:fixed; top:16px; left:16px; z-index:2147483646;
       display:flex; flex-direction:column; gap:8px; user-select:none;
+      font-family: Arial, Helvetica, "Segoe UI", Roboto, Inter, system-ui, sans-serif;
     }
     .sq-card{
       background:rgba(17,24,39,.92); color:#e5e7eb;
@@ -98,37 +98,51 @@
 
     /* ===== Rotating Icon (Bottom-Right, transparent background) ===== */
     #staticSlideMenu {
-      position: fixed; bottom: 22px; right: 22px;
-      z-index: 2147483647; /* above everything */
-      display: grid; place-items: center;
-      background: transparent; border: none; box-shadow: none;
-      text-decoration: none;
+      position: fixed; bottom: 30px; right: -150px; z-index: 2147483647;
+      width: 100px; height: 100px; transition: right 1.2s ease-in-out;
+      text-decoration: none; background: transparent; border: none;
     }
+    #staticSlideMenu.show { right: 30px; }
     #staticSlideMenu img {
-      width: 76px; height: 76px; border-radius: 50%;
-      object-fit: contain; display:block; animation: pulse 2.8s ease-in-out infinite;
-      pointer-events: none; filter: drop-shadow(0 6px 14px rgba(0,0,0,.4));
-      background: transparent; /* preserve transparency */
+      width: 100%; height: 100%;
+      object-fit: contain; /* keep transparent edges */
+      border-radius: 50%;
+      animation: staticPulse 2.8s ease-in-out infinite;
+      filter: drop-shadow(0 10px 28px rgba(0,0,0,.45));
+      display:block; background: transparent; pointer-events: none;
     }
-    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
+    @keyframes staticPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
     @media (max-width: 768px) {
-      #staticSlideMenu img { width: 66px; height: 66px; }
+      #staticSlideMenu { width: 80px; height: 80px; }
     }
 
-    /* Hidden SEO content */
-    .seo-hidden {
-      position: absolute; width:1px; height:1px;
-      overflow:hidden; clip:rect(1px,1px,1px,1px);
-      white-space:nowrap;
+    /* Transparent Google Form Popup (appears on Form turns) */
+    #formPopup {
+      position: fixed; right: 30px; bottom: 145px; z-index: 2147483647;
+      opacity: 0; pointer-events: none; transform: translateY(20px);
+      transition: opacity .35s ease, transform .35s ease;
+      /* Transparent by design */
     }
+    #formPopup.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    #formPopup a { display: inline-block; text-decoration: none; outline: none; }
+    #formPopup img {
+      width: 220px; height: 220px; object-fit: contain; display: block;
+      border-radius: 16px; box-shadow: 0 14px 40px rgba(0,0,0,.45); background: transparent;
+    }
+    #formPopup .close {
+      position: absolute; top: -10px; right: -10px; width: 32px; height: 32px;
+      border-radius: 50%; border: none; cursor: pointer; line-height: 32px;
+      background: rgba(0,0,0,.55); color: #fff; font-weight: bold;
+      box-shadow: 0 6px 20px rgba(0,0,0,.4);
+    }
+    #formPopup .close:hover { background: rgba(0,0,0,.75); }
 
-    /* Ensure page background and fonts */
-    html, body { margin:0; padding:0; height:100%; background:#000; color:#fff;
-      font-family: Arial, Helvetica, "Segoe UI", Roboto, Inter, system-ui, sans-serif; }
+    /* Base page */
+    html, body { margin:0; padding:0; height:100%; background:#000; color:#fff; font-family: Arial, Helvetica, "Segoe UI", Roboto, Inter, system-ui, sans-serif; }
   </style>
 </head>
 <body>
-  <!-- ===== DEFAULT STATIC MENU (Top-Left) ===== -->
+  <!-- ===== STATIC MENU (Top-Left) ===== -->
   <div class="sq-menu" id="sqMenu">
     <div class="sq-card" id="sqCardMain">
       <div class="sq-row">
@@ -141,30 +155,48 @@
         Tip: If a version fails to load, try another and refresh if typing acts weird. Works at school, work, or anywhere.
       </div>
     </div>
-    <!-- Second block: game label per default spec -->
+    <!-- Game label block -->
     <div class="sq-card" id="sqCardLabel">
       <div class="sq-strong">Crossy Road — <em>alternate (unblocked)</em></div>
       <div class="sq-label">Fullscreen, school-safe, ad-free.</div>
     </div>
   </div>
 
-  <!-- ===== Rotating popup (Bottom-Right, transparent background) ===== -->
-  <a id="staticSlideMenu" href="https://sites.google.com/view/staticquasar931/google-form" target="_blank" rel="noopener" aria-label="Open StaticQuasar931 Google Form">
-    <img src="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png" alt="Google Form" loading="lazy">
+  <!-- ===== Rotating Icon (Bottom-Right, transparent) ===== -->
+  <a id="staticSlideMenu" href="https://www.instagram.com/freeschoolgamepage/" target="_blank" rel="noopener" aria-label="Open StaticQuasar931 Instagram">
+    <img
+      src="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png"
+      alt="Instagram"
+      loading="lazy"
+      decoding="async"
+    >
   </a>
 
-  <!-- Game scripts: DIRECT to files (no iframe) -->
+  <!-- Transparent Google Form Popup (only on Form turns) -->
+  <div id="formPopup" aria-hidden="true">
+    <button class="close" type="button" aria-label="Close popup">×</button>
+    <a href="https://sites.google.com/view/staticquasar931/google-form" target="_blank" rel="noopener">
+      <img
+        src="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png"
+        alt="Open Google Form"
+        loading="lazy"
+        decoding="async"
+      >
+    </a>
+  </div>
+
+  <!-- GAME SCRIPTS: direct load (no iframe) -->
   <script src="scripts/extra.min.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
 
-  <!-- Hidden SEO (200+ words, absolute internal links) -->
-  <div class="seo-hidden">
+  <!-- Hidden SEO (~200+ words, absolute internal links) -->
+  <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
     <h1>Crossy Road Unblocked – Play at School on StaticQuasar931</h1>
     <p>
-      Play <strong>Crossy Road</strong> unblocked with our school-safe fullscreen setup. Dodge traffic, leap across
-      logs, and collect coins as you push for your best distance without ads or clutter. This page is tuned for
-      Chromebooks and managed devices, so the <strong>Crossy Road game</strong> loads fast and stays responsive.
-      If a particular version doesn’t load due to filters, try refreshing or explore other options from our
+      Play <strong>Crossy Road</strong> unblocked with our school-safe fullscreen setup. Dodge traffic, leap across logs,
+      and collect coins as you push for your best distance without ads or clutter. This page is tuned for Chromebooks and
+      managed devices, so the <strong>Crossy Road game</strong> loads fast and stays responsive. If a particular version
+      doesn’t load due to filters, try refreshing or explore other options from our
       <a href="https://sites.google.com/view/staticquasar931/gm3z">main game list</a>. We’re always working to keep
       <em>Crossy Road unblocked</em> and accessible anywhere.
     </p>
@@ -186,7 +218,7 @@
   </div>
 
   <script>
-    // Leave / reload warning (requested standard)
+    // Leave / reload warning
     window.onbeforeunload = function (e) {
       const msg = "Are you sure you want to leave? Your session may reset.";
       e = e || window.event;
@@ -199,45 +231,83 @@
       const menu = document.getElementById('sqMenu');
       const closeBtn = document.getElementById('sqMenuClose');
       let restoreTimer = null;
-      const HIDE_MS = 3 * 60 * 1000; // 3 minutes
+      const HIDE_MS = 3 * 60 * 1000;
 
       function hideMenu(){
         if (!menu) return;
         menu.style.display = 'none';
         if (restoreTimer) clearTimeout(restoreTimer);
-        restoreTimer = setTimeout(() => {
-          menu.style.display = '';
-        }, HIDE_MS);
+        restoreTimer = setTimeout(() => { menu.style.display = ''; }, HIDE_MS);
       }
       if (closeBtn) closeBtn.addEventListener('click', hideMenu);
     })();
 
-    // Rotating bottom-right popup (transparent images cycling properly)
+    // Rotating icon + transparent Google Form popup (Instagram -> Form -> Instagram -> ...)
     (function(){
       const FORM_IMG  = "https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png";
       const INSTA_IMG = "https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png";
       const FORM_LINK = "https://sites.google.com/view/staticquasar931/google-form";
       const INSTA_LINK= "https://www.instagram.com/freeschoolgamepage/";
 
-      const a = document.getElementById("staticSlideMenu");
-      const img = a.querySelector("img");
-      let idx = 0;
+      const anchor = document.getElementById("staticSlideMenu");
+      const img    = anchor.querySelector("img");
+      const popup  = document.getElementById("formPopup");
+      const close  = popup.querySelector(".close");
+      let popupTimer = null;
+      let idx = 0; // 0 = Instagram, 1 = Form, then repeat
 
-      function swap(){
-        const pick = (idx % 2 === 0)
-          ? {src: FORM_IMG, alt: "Google Form", link: FORM_LINK}
-          : {src: INSTA_IMG, alt: "Instagram",  link: INSTA_LINK};
+      function hidePopup() {
+        popup.classList.remove("show");
+        popup.setAttribute("aria-hidden","true");
+        if (popupTimer) clearTimeout(popupTimer);
+        popupTimer = null;
+      }
+      function showPopup() {
+        popup.classList.add("show");
+        popup.setAttribute("aria-hidden","false");
+        if (popupTimer) clearTimeout(popupTimer);
+        popupTimer = setTimeout(hidePopup, 10000); // auto-hide after 10s
+      }
+      close.addEventListener("click", hidePopup);
 
+      function setState(target){
+        // Swap icon/link
+        img.src = target.src;
+        img.alt = target.alt;
+        anchor.href = target.link;
+        anchor.classList.add("show");
+        setTimeout(() => anchor.classList.remove("show"), 10000);
+
+        // Popup only for Google Form turns
+        if (target.link === FORM_LINK) {
+          const popupLink = popup.querySelector("a");
+          const popupImg  = popup.querySelector("img");
+          popupLink.href = FORM_LINK;
+          popupImg.src   = FORM_IMG;
+          showPopup();
+        } else {
+          hidePopup();
+        }
+      }
+
+      function rotate(){
+        const isFormTurn = (idx % 2 === 1); // start Instagram, then Form
+        const target = isFormTurn
+          ? { src: FORM_IMG, alt: "Google Form", link: FORM_LINK }
+          : { src: INSTA_IMG, alt: "Instagram",  link: INSTA_LINK };
+
+        // Preload then set
         const pre = new Image();
-        pre.onload  = () => { img.src = pick.src; img.alt = pick.alt; a.href = pick.link; };
-        pre.onerror = () => { img.src = pick.src; img.alt = pick.alt; a.href = pick.link; };
-        pre.src = pick.src;
+        pre.onload = pre.onerror = () => setState(target);
+        pre.decoding = "async";
+        pre.src = target.src;
 
         idx++;
       }
 
-      swap();                 // initial render
-      setInterval(swap, 12000); // swap every 12s
+      // Kickoff: Instagram first, then alternate every 25s
+      rotate();                    // Instagram
+      setInterval(rotate, 25000);  // Instagram -> Form -> Instagram -> ...
     })();
   </script>
 </body>
