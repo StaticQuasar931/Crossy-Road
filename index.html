@@ -1,249 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Charset & Viewport -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
 
-  <!-- Title -->
-  <title>Play Crossy Road Unblocked – StaticQuasar931</title>
+  <title>Play Crossy Road – StaticQuasar931 Unblocked</title>
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://staticquasar931.github.io/Crossy-Road/">
+  <!-- Canonical (adjust if you publish to a different URL) -->
+  <link rel="canonical" href="https://sites.google.com/view/staticquasar931/gm3z/crossy-road"/>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <!-- SEO Meta -->
+  <meta name="description" content="Play Crossy Road unblocked — hop through traffic and obstacles right in your browser. Free, school-safe, fullscreen." />
+  <meta name="keywords" content="Crossy Road, Crossy Road unblocked, play Crossy Road online, school safe Crossy Road, browser arcade game, StaticQuasar931 games, Chromebook arcade, unblocked hopping game" />
+  <meta name="robots" content="index, follow" />
 
-  <!-- Primary SEO -->
-  <meta name="description" content="Play Crossy Road unblocked and school-safe on StaticQuasar931. Hop through traffic and rivers, collect coins, and chase high scores — works at school, work, or anywhere!">
-  <meta name="keywords" content="Crossy Road, CrossyRoad, crossy road, crossyroad game, crossyroad g@me, Crossy Road unblocked, crossy road unblocked at school, Crossy Road school safe, Crossy Road working at school, unbl0cked Crossy Road, free Crossy Road online, Crossy Road web game, play Crossy Road at school, Static, Static 931, StaticQuasar, StaticQuasar931, staticq, staticq931, 931 games">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#111827">
+  <!-- Social Metadata (image only used for previews; not shown on-page) -->
+  <meta property="og:title" content="Crossy Road – Unblocked Arcade by StaticQuasar931" />
+  <meta property="og:description" content="Hop, dodge, survive. Play Crossy Road free and unblocked in your browser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sites.google.com/view/staticquasar931/gm3z/crossy-road" />
+  <meta property="og:image" content="https://res.cloudinary.com/dcsrqennd/image/upload/v1757981345/CrossyRoad_StaticQuasar931_clndd6.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Social Metadata -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Play Crossy Road Unblocked – StaticQuasar931">
-  <meta property="og:description" content="School-safe Crossy Road that actually works. Fullscreen, fast, and ad-free on StaticQuasar931.">
-  <meta property="og:url" content="https://staticquasar931.github.io/Crossy-Road/">
-  <meta property="og:image" content="https://res.cloudinary.com/dcsrqennd/image/upload/v1757981345/CrossyRoad_StaticQuasar931_clndd6.webp">
-  <meta property="og:site_name" content="StaticQuasar931">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Play Crossy Road Unblocked – StaticQuasar931">
-  <meta name="twitter:description" content="Hop, dodge, survive! Play Crossy Road unblocked and school-safe here.">
-  <meta name="twitter:image" content="https://res.cloudinary.com/dcsrqennd/image/upload/v1757981345/CrossyRoad_StaticQuasar931_clndd6.webp">
+  <!-- Favicon (optional) -->
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"VideoGame",
-    "name":"Crossy Road",
-    "url":"https://staticquasar931.github.io/Crossy-Road/",
-    "applicationCategory":"Game",
-    "genre":["Arcade","Endless Runner","Casual"],
-    "playMode":"SinglePlayer",
-    "operatingSystem":"Web",
-    "inLanguage":"en",
-    "publisher":"StaticQuasar931",
-    "description":"Play Crossy Road unblocked and school-safe on StaticQuasar931. Fullscreen, fast, and ready for Chromebooks."
-  }
-  </script>
+  <!-- Preload popup icons for rotating button -->
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png">
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png">
 
-  <!-- Keep your existing game CSS -->
+  <!-- Game styles (kept from original) -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="app-store-interstitial.css" />
-
-  <!-- Preload rotating popup icons (transparent) -->
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png"> <!-- Instagram -->
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png"> <!-- Google Form -->
-
-  <!-- REMOVE ADS / TRACKING (not loaded) -->
-  <!-- (Removed) Google Ads -->
-  <!-- (Removed) Google Tag (gtag.js) -->
-  <!-- (Removed) poki-sdk.js -->
+  <!-- Non-blocking load of optional interstitial CSS -->
+  <link rel="preload" href="app-store-interstitial.css" as="style" />
+  <link rel="stylesheet" href="app-store-interstitial.css" media="print" onload="this.media='all'">
 
   <style>
-    /* ===== NORMAL STATIC MENU (Top-Left, default look) ===== */
-    .sq-menu{
-      position:fixed; top:16px; left:16px; z-index:2147483646;
-      display:flex; flex-direction:column; gap:8px; user-select:none;
-      font-family: Arial, Helvetica, "Segoe UI", Roboto, Inter, system-ui, sans-serif;
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      background: #000; overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
     }
-    .sq-card{
-      background:rgba(17,24,39,.92); color:#e5e7eb;
-      border:1px solid rgba(255,255,255,.08); border-radius:12px;
-      padding:10px 12px; max-width:min(88vw, 420px);
-      box-shadow:0 10px 25px rgba(0,0,0,.35); backdrop-filter: blur(6px);
-    }
-    .sq-row{ display:flex; align-items:center; gap:10px; justify-content:space-between; }
-    .sq-link{
-      text-decoration:none; color:#fff; font-weight:700;
-      padding:6px 10px; border-radius:10px; background:rgba(79,70,229,.15);
-      box-shadow:0 6px 14px rgba(79,70,229,.3);
-      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-    .sq-link:hover{ transform:translateY(-1px); box-shadow:0 10px 18px rgba(79,70,229,.35); }
-    .sq-twinkle{ animation:sqTwinkle 2.8s ease-in-out infinite; }
-    @keyframes sqTwinkle{
-      0%,100%{ box-shadow:0 6px 14px rgba(79,70,229,.25); }
-      50%{ box-shadow:0 10px 24px rgba(99,102,241,.55); }
-    }
-    .sq-close{
-      border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06);
-      color:#fca5a5; cursor:pointer; font-size:14px; padding:2px 6px; border-radius:8px;
-    }
-    .sq-close:hover{ background:rgba(255,255,255,.12); color:#fff; }
-    .sq-label{ font-size:13px; color:#9ca3af; margin-top:4px; line-height:1.3; }
-    .sq-strong{ color:#fff; }
 
-    /* ===== Rotating Icon (Bottom-Right, transparent background) ===== */
+    /* The game runs in its own canvas created by bootstrap.min.js.
+       Ensure it can fill the screen. */
+    #game-root, canvas {
+      width: 100vw !important;
+      height: 100vh !important;
+      display: block;
+      background: #000;
+    }
+
+    /* Static Menu (top-left) */
+    #staticMenu {
+      position: fixed; top: 10px; left: 10px; z-index: 9999;
+      background: #111; color: #0ff; padding: 10px 16px; border-radius: 10px; font-size: 14px;
+      animation: glow 2s infinite alternate;
+    }
+    #staticMenu a { color: #0ff; text-decoration: none; font-weight: bold; }
+    #closeStaticMenu { margin-left: 12px; color: #f55; cursor: pointer; }
+    @keyframes glow { 0%{opacity:.7} 100%{opacity:1; box-shadow:0 0 10px #0ff} }
+
+    /* Rotating Icon (bottom-right) — ONLY Form/Instagram */
     #staticSlideMenu {
-      position: fixed; bottom: 30px; right: -150px; z-index: 2147483647;
+      position: fixed; bottom: 30px; right: -150px; z-index: 9999;
       width: 100px; height: 100px; transition: right 1.2s ease-in-out;
-      text-decoration: none; background: transparent; border: none;
     }
     #staticSlideMenu.show { right: 30px; }
     #staticSlideMenu img {
       width: 100%; height: 100%;
-      object-fit: contain; /* keeps transparency */
-      border-radius: 50%;
-      animation: staticPulse 2.8s ease-in-out infinite;
-      filter: drop-shadow(0 10px 28px rgba(0,0,0,.45));
-      display:block; background: transparent; pointer-events: none;
+      object-fit: cover; border-radius: 50%;
+      animation: pulse 2.8s ease-in-out infinite;
+      box-shadow: 0 10px 28px rgba(0,0,0,.45);
     }
-    @keyframes staticPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
+    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
     @media (max-width: 768px) { #staticSlideMenu { width: 80px; height: 80px; } }
 
-    /* Base page */
-    html, body { margin:0; padding:0; height:100%; background:#000; color:#fff; font-family: Arial, Helvetica, "Segoe UI", Roboto, Inter, system-ui, sans-serif; }
+    /* Hidden SEO block */
+    .seo-hidden {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
   </style>
-</head>
-<body>
-  <!-- ===== NORMAL STATIC MENU ===== -->
-  <div class="sq-menu" id="sqMenu">
-    <div class="sq-card" id="sqCardMain">
-      <div class="sq-row">
-        <a class="sq-link sq-twinkle" href="https://sites.google.com/view/staticquasar931/gm3z" target="_blank" rel="noopener">
-          ✨ More Unblocked Games by Static
-        </a>
-        <button class="sq-close" id="sqMenuClose" aria-label="Hide menu for 3 minutes">✕</button>
-      </div>
-      <div class="sq-label">
-        Tip: If a version fails to load, try another and refresh if typing acts weird. Works at school, work, or anywhere.
-      </div>
-    </div>
-    <!-- Second block: game label -->
-    <div class="sq-card" id="sqCardLabel">
-      <div class="sq-strong">Crossy Road — <em>alternate (unblocked)</em></div>
-      <div class="sq-label">Fullscreen, school-safe, ad-free.</div>
-    </div>
-  </div>
 
-  <!-- ===== Rotating Icon (Bottom-Right) — Instagram → Google Form → Instagram → ... ===== -->
-  <a id="staticSlideMenu" href="https://www.instagram.com/freeschoolgamepage/" target="_blank" rel="noopener" aria-label="Open StaticQuasar931 Instagram">
-    <img
-      src="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png"
-      alt="Instagram"
-      loading="lazy"
-      decoding="async"
-    >
-  </a>
-
-  <!-- GAME SCRIPTS: direct load (no iframe) -->
+  <!-- KEEP: game dependencies -->
   <script src="scripts/extra.min.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
+  <script src="poki-sdk.js"></script>
 
-  <!-- Hidden SEO (~200+ words, absolute internal links) -->
-  <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
-    <h1>Crossy Road Unblocked – Play at School on StaticQuasar931</h1>
-    <p>
-      Play <strong>Crossy Road</strong> unblocked with our school-safe fullscreen setup. Dodge traffic, leap across logs,
-      and collect coins as you push for your best distance without ads or clutter. This page is tuned for Chromebooks and
-      managed devices, so the <strong>Crossy Road game</strong> loads fast and stays responsive. If a particular version
-      doesn’t load due to filters, try refreshing or explore other options from our
-      <a href="https://sites.google.com/view/staticquasar931/gm3z">main game list</a>. We’re always working to keep
-      <em>Crossy Road unblocked</em> and accessible anywhere.
-    </p>
-    <p>
-      Looking for more school-safe arcade titles? Browse
-      <a href="https://sites.google.com/view/staticquasar931/gm3z">More Unblocked Games by Static</a>.
-      Want to request a new version or report an issue? Use our
-      <a href="https://sites.google.com/view/staticquasar931/google-form">Google Form</a>. For quick updates and featured
-      games, follow us on Instagram at
-      <a href="https://www.instagram.com/freeschoolgamepage/">@freeschoolgamepage</a>. Keywords:
-      crossy road unblocked, crossyroad unblocked at school, crossy road working at school, school-safe crossy road,
-      crossyroad web game, crossy road g@me, unbl0cked crossy road, Static 931, StaticQuasar931, staticq931.
-    </p>
-    <p>
-      Our goal is simple: deliver clean, fast, and reliable pages that let you play without distractions. Every page
-      includes fullscreen support, leave warnings to protect progress, and simple UI that stays out of the way of the
-      gameplay. Have fun, stay safe online, and keep hopping!
-    </p>
-  </div>
+  <!-- REMOVED: Ads & analytics scripts from original (Google Ads + gtag) -->
 
   <script>
-    // Leave / reload warning
-    window.onbeforeunload = function (e) {
-      const msg = "Are you sure you want to leave? Your session may reset.";
-      e = e || window.event;
-      if (e) e.returnValue = msg;
-      return msg;
-    };
+    // Leave warning
+    window.onbeforeunload = () => "Are you sure you want to leave? Your progress may not be saved.";
 
-    // Static Menu hide & return (3 minutes)
-    (function(){
-      const menu = document.getElementById('sqMenu');
-      const closeBtn = document.getElementById('sqMenuClose');
-      let restoreTimer = null;
-      const HIDE_MS = 3 * 60 * 1000;
+    // Static menu hide + restore after 3 minutes
+    function initStaticMenuClose() {
+      const menu = document.getElementById("staticMenu");
+      const closer = document.getElementById("closeStaticMenu");
+      if (!menu || !closer) return;
+      closer.onclick = () => {
+        menu.style.display = "none";
+        setTimeout(() => { menu.style.display = "block"; }, 180000);
+      };
+    }
 
-      function hideMenu(){
-        if (!menu) return;
-        menu.style.display = 'none';
-        if (restoreTimer) clearTimeout(restoreTimer);
-        restoreTimer = setTimeout(() => { menu.style.display = ''; }, HIDE_MS);
-      }
-      if (closeBtn) closeBtn.addEventListener('click', hideMenu);
-    })();
+    // Bottom-right rotating icon (Google Form <-> Instagram)
+    const FORM_IMG  = "https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png";
+    const INSTA_IMG = "https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png";
+    const FORM_LINK = "https://sites.google.com/view/staticquasar931/google-form";
+    const INSTA_LINK= "https://www.instagram.com/freeschoolgamepage/";
 
-    // Rotating icon (Instagram -> Google Form -> Instagram -> ...)
-    (function(){
-      const FORM_IMG  = "https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png";
-      const INSTA_IMG = "https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png";
-      const FORM_LINK = "https://sites.google.com/view/staticquasar931/google-form";
-      const INSTA_LINK= "https://www.instagram.com/freeschoolgamepage/";
+    function initRotatingIcon(){
+      const a = document.getElementById("staticSlideMenu");
+      const img = a?.querySelector("img");
+      if (!a || !img) return;
 
-      const anchor = document.getElementById("staticSlideMenu");
-      const img    = anchor.querySelector("img");
-      let idx = 0; // 0 = Instagram first, 1 = Form next, repeat
-
-      function setState(target){
-        img.src  = target.src;
-        img.alt  = target.alt;
-        anchor.href = target.link;
-        // slide in for visibility, then slide out after 10s
-        anchor.classList.add("show");
-        setTimeout(() => anchor.classList.remove("show"), 10000);
+      function show(pick){
+        img.src = pick.src; img.alt = pick.alt; a.href = pick.link;
+        a.classList.add("show");
+        clearTimeout(show.hideTimer);
+        show.hideTimer = setTimeout(() => a.classList.remove("show"), 10000);
       }
 
       function rotate(){
-        const isFormTurn = (idx % 2 === 1);
-        const target = isFormTurn
-          ? { src: FORM_IMG,  alt: "Google Form", link: FORM_LINK }
-          : { src: INSTA_IMG, alt: "Instagram",  link: INSTA_LINK };
+        rotate.idx = (rotate.idx ?? 0) ^ 1; // toggle 0/1
+        const pick = rotate.idx
+          ? {src: INSTA_IMG, alt: "Instagram",   link: INSTA_LINK}
+          : {src: FORM_IMG,  alt: "Google Form", link: FORM_LINK};
 
-        // Preload then set
         const pre = new Image();
-        pre.onload = pre.onerror = () => setState(target);
+        pre.onload = pre.onerror = () => show(pick);
         pre.decoding = "async";
-        pre.src = target.src;
-
-        idx++;
+        pre.src = pick.src;
       }
 
-      rotate();                   // start on Instagram
-      setInterval(rotate, 25000); // alternate every 25s
-    })();
+      rotate.idx = -1; // start with Google Form
+      rotate();
+      setInterval(rotate, 25000);
+    }
+
+    // Ensure a game container exists for bootstrap (some builds look for #game-root)
+    document.addEventListener("DOMContentLoaded", () => {
+      if (!document.getElementById("game-root")) {
+        const root = document.createElement("div");
+        root.id = "game-root";
+        document.body.appendChild(root);
+      }
+      initStaticMenuClose();
+      initRotatingIcon();
+    });
   </script>
+</head>
+<body>
+  <!-- Static Menu -->
+  <div id="staticMenu">
+    <a href="https://sites.google.com/view/staticquasar931/gm3z" target="_blank" rel="noopener">More Unblocked Games by Static</a>
+    <span id="closeStaticMenu">✕</span>
+  </div>
+
+  <!-- Rotating Icon -->
+  <a id="staticSlideMenu" href="https://sites.google.com/view/staticquasar931/google-form" target="_blank" rel="noopener">
+    <img
+      src="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png"
+      alt="Google Form"
+      loading="lazy"
+      decoding="async"
+      referrerpolicy="no-referrer"
+    >
+  </a>
+
+  <!-- Hidden SEO (no visible artwork) -->
+  <div class="seo-hidden">
+    <h1>Crossy Road – Play Unblocked Online</h1>
+    <p>Enjoy the classic hop-and-dodge arcade action of Crossy Road directly in your browser. Unblocked, fullscreen, and school-safe on Chromebook and PC.</p>
+  </div>
+
+  <!-- KEEP: the game bootstrapper (this starts the game) -->
+  <script src="scripts/bootstrap.min.js"></script>
 </body>
 </html>
